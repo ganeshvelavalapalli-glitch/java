@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+
+        for (int n = 250; n <= 750; n++) {
+
+            int temp = n;
+            int count = 0;
+
+            while (temp > 0) {
+                int digit = temp % 10;
+
+                if (digit == 2 || digit == 3 ||
+                    digit == 5 || digit == 7) {
+                    count++;
+                }
+
+                temp = temp / 10;
+            }
+
+            if (count == 2) {
+                System.out.print(n + " ");
+            }
+        }
+    }
+}
